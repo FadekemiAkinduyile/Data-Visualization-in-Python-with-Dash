@@ -116,4 +116,4 @@ if __name__ == "__main__":
     except IndexError:
         port = 8050  # Default port if not specified in command line arguments
 
-    app.run_server(debug=True, use_reloader=False, port=port)
+    app.run_server(debug=True, use_reloader=False, port=8055)
