@@ -7,11 +7,11 @@ data = pd.read_csv("precious_metals_prices_2018_2021.csv")
 
 # Create a plotly figure for use by st.plotly_chart()
 fig = px.line(
-    data,
-    title="Precious Metal Prices",
-    x="DateTime",
-    y=["Gold"],
-    color_discrete_map={"Gold": "gold"}
+    data
+    # title="Precious Metal Prices",
+    # x="DateTime",
+    # y=["Gold"],
+    # color_discrete_map={"Gold": "gold"}
 )
 
 # Streamlit part
