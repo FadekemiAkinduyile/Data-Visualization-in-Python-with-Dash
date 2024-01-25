@@ -44,10 +44,10 @@ fig = px.line(
 )
 
 # Streamlit part
-st.title("Precious Metal Prices 2018-2021")
+st.title("Precious Metal Prices")
 
 # Header area
-st.header("Gold Prices")
+#st.header("Gold Prices")
 st.write("The cost of precious metals between 2018 and 2021")
 
 # Menu area
