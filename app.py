@@ -104,5 +104,9 @@ def update_chart(metal):
     return fig
 
 if __name__ == "__main__":
-    app.run_server(debug=True, use_reloader=False, port=0)
+    try:
+        port = int(sys.argv[1])
+    except IndexError:
+        port = 8050  # Default port if not specified in command line arguments
 
+    app.run_server(debug=True, use_reloader=False, port=port)
