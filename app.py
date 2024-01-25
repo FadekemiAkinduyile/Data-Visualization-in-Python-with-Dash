@@ -104,5 +104,5 @@ def update_chart(metal):
     return fig
 
 if __name__ == "__main__":
-    app.run_server(debug=True, use_reloader=False)
+    app.run_server(debug=True, use_reloader=False, port=8051)
 
