@@ -8,7 +8,7 @@ data = pd.read_csv("precious_metals_prices_2018_2021.csv")
 # Create a plotly figure for use by st.plotly_chart()
 fig = px.line(
     data,
-    title="Precious Metal Prices 2018-2021",
+    title="Precious Metal Prices",
     x="DateTime",
     y=["Gold"],
     color_discrete_map={"Gold": "gold"}
@@ -18,11 +18,11 @@ fig = px.line(
 st.title("Precious Metal Prices 2018-2021")
 
 # Header area
-st.header("Gold Prices")
+# st.header("Gold Prices")
 st.write("The cost of precious metals between 2018 and 2021")
 
 # Menu area
-metal_filter = st.selectbox("Select Metal", data.columns[1:], index=0)
+# metal_filter = st.selectbox("Select Metal", data.columns[1:], index=0)
 
 # Graph container
 st.plotly_chart(fig)
