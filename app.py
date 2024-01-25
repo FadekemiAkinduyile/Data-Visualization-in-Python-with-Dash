@@ -6,7 +6,7 @@ import plotly.express as px
 import pandas as pd
 
 #Read in the data
-data = pd.read_csv("02_01/precious_metals_prices_2018_2021.csv")
+data = pd.read_csv("precious_metals_prices_2018_2021.csv")
 
 #Create a plotly figure for use by dcc.Graph()
 fig = px.line(
