@@ -10,7 +10,6 @@ from dash import html, dcc
 from dash.dependencies import Input, Output
 import plotly.express as px
 import pandas as pd
-from streamlit_dash import st_id_selector
 import sys
 
 #Read in the data
