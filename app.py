@@ -5,6 +5,14 @@ from dash.dependencies import Input, Output
 import plotly.express as px
 import pandas as pd
 
+import streamlit as st
+from dash import html, dcc
+from dash.dependencies import Input, Output
+import plotly.express as px
+import pandas as pd
+from streamlit_dash import st_id_selector
+import sys
+
 #Read in the data
 data = pd.read_csv("precious_metals_prices_2018_2021.csv")
 
