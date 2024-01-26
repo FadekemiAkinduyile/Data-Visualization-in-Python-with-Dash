@@ -35,7 +35,6 @@
 
 
 
-
 import streamlit as st
 import plotly.express as px
 import pandas as pd
@@ -57,8 +56,12 @@ st.write("The cost of precious metals between 2018 and 2021")
 metal_filter = st.selectbox("Select Metal", data.columns[1:], index=0)
 date_range = st.date_input("Select Date Range", [data["DateTime"].min(), data["DateTime"].max()])
 
+# Convert the selected date range to pandas Timestamp
+start_date = pd.Timestamp(date_range[0])
+end_date = pd.Timestamp(date_range[1])
+
 # Filter data based on selected metal and date range
-filtered_data = data.loc[(data["DateTime"] >= date_range[0]) & (data["DateTime"] <= date_range[1])]
+filtered_data = data.loc[(data["DateTime"] >= start_date) & (data["DateTime"] <= end_date)]
 
 # Create a plotly figure for the selected metal and date range
 fig = px.line(
@@ -90,4 +93,3 @@ fig.update_layout(
 
 # Display the updated chart
 st.plotly_chart(fig)
-
