@@ -42,7 +42,9 @@ import pandas as pd
 
 # Read in the data
 data = pd.read_csv("precious_metals_prices_2018_2021.csv")
-data["DateTime"] = pd.to_datetime(data["DateTime"], format="%Y-%m-%d")
+
+# Let Pandas infer the datetime format
+data["DateTime"] = pd.to_datetime(data["DateTime"], infer_datetime_format=True)
 
 # Streamlit part
 st.title("Precious Metal Prices 2018-2021")
